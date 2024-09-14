@@ -56,6 +56,11 @@ const directors = [
       <hr>
     `;
     directorsList.appendChild(directorDiv); 
-    
+
   });
 
+// Лучшие фильмы режиссёров
+const topFilmsList = directors.map(item => item.top_rated_film);
+
+const topFilmsElement = document.getElementById('top-films-list');
+topFilmsElement.textContent = topFilmsList.join(', ');
